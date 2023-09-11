@@ -24,5 +24,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Start the server
+        run: node index.js &
+
+      - name: Wait for the server to start
+        run: sleep 5s
+
       - name: Run tests
         run: npm test
+
+      - name: Stop the server
+        run: pkill node
