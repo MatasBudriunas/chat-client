@@ -1,4 +1,4 @@
-const {removeClient } = require('./clients');
+const { removeClient } = require('./clients');
 const broadcast = require('./broadcast');
 
 function disconnect(client, reason) {
